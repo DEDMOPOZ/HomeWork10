@@ -1,0 +1,12 @@
+flake8==3.9.0
+flake8-builtins==1.5.3
+flake8-docstrings==1.6.0
+flake8-import-order==0.18.1
+flake8-quotes==3.2.0
+mccabe==0.6.1
+numpy==1.20.2
+pycodestyle==2.7.0
+pydocstyle==6.0.0
+pyflakes==2.3.1
+recordclass==0.14.3
+snowballstemmer==2.1.0
