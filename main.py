@@ -1,7 +1,7 @@
 import collections
 from dataclasses import dataclass
 import itertools
-import string
+# import string
 
 import numpy as np
 from recordclass import RecordClass
@@ -10,11 +10,9 @@ from recordclass import RecordClass
 with open('poem.txt', 'r', encoding='utf-8') as f:
     poem = f.read()
 
-poem = poem.translate({ord(c): None for c in string.whitespace})
-poem = poem.translate({ord(c): None for c in string.punctuation})
-poem = poem.translate({ord(c): None for c in '—…'})
+new_poem = [i for i in poem.lower() if i.isalpha()]
 
-cnt = collections.Counter(poem.lower())
+cnt = collections.Counter(new_poem)
 for k, v in cnt.most_common(5):
     print(k, v)
 
